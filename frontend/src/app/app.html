@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="cyber-card">
+    <div class="header">
+      <span class="status-dot"></span>
+      <h1>SECURE CAESAR PROTOCOL</h1>
+    </div>
+
+    <div class="content">
+      <div class="input-group">
+        <label>MENSAGEM ALVO</label>
+        <textarea [(ngModel)]="text" placeholder="Digite a mensagem secreta aqui..." rows="4"></textarea>
+      </div>
+
+      <div class="controls">
+        <div class="input-group shift-group">
+          <label>CHAVE (SHIFT)</label>
+          <input type="number" [(ngModel)]="shift" min="1" max="25">
+        </div>
+        
+        <div class="actions">
+          <button (click)="process('encrypt')" class="btn encrypt">
+            <i class="lock-icon">🔒</i> ENCRIPTAR
+          </button>
+          <button (click)="process('decrypt')" class="btn decrypt">
+            <i class="unlock-icon">🔓</i> DECRIPTAR
+          </button>
+        </div>
+      </div>
+
+      <div class="output-group" *ngIf="result">
+        <label>RESULTADO PROCESSADO</label>
+        <div class="result-box">
+          {{ result }}
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p class="academic-info">
+        Projeto desenvolvido para a disciplina de Auditoria e Segurança da Informação do curso de Bacharelado em Sistemas de Informação - Universidade Federal de Uberlândia
+      </p>
+      <p class="author-info">
+        Desenvolvido por: <span class="highlight">Augusto Ortigoso Barbosa | @supp3rguto</span>
+      </p>
+    </div>
+  </div>
+</div>
