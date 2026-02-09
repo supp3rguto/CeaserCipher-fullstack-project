@@ -60,7 +60,7 @@ python app.py
 ```
 O servidor iniciará em http://127.0.0.1:5000
 
-###2. Frontend (Cliente)
+### 2. Frontend (Cliente)
 ```bash
 Bash
 cd frontend
